@@ -1,2 +1,5 @@
-uvicorn~=0.18.2
-fastapi~=0.78.0
+fastapi
+motor
+python-decouple
+pymongo
+uvicorn
