@@ -3,3 +3,5 @@ motor
 python-decouple
 pymongo
 uvicorn
+pydantic
+pymongo[srv]

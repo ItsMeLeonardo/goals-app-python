@@ -1,0 +1,14 @@
+[{$lookup: {
+  from: 'tags',
+  localField: 'tags',
+  foreignField: '_id',
+  as: 'tags'
+}}, {$project: {
+  title: 1,
+  tags: '$tags.name'
+}}, {$unwind: {
+  path: '$tags',
+}}, {$group: {
+  _id: '$tags',
+  posts: {$sum: 1 }
+}}]
